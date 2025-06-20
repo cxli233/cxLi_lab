@@ -3,12 +3,42 @@
   <head>
   <style>
     .content {     
-      width: 90%;
+      display: flex;
+      align-items: center;      
+      justify-content: space-between;
+      gap: 20px;
       max-width: 1200px;
-      margin: 0 auto;             
+      margin: 0 auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 1200px;         
       text-align: left;        
     }
+    
+    .text-column {
+      flex: 1;
+      font-family: Arial, sans-serif;
+    }
 
+    .image-column {
+      flex: 1;
+    }
+
+    .image-column img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px; 
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
     nav {
       background-color: #333;
       color: white;
@@ -71,6 +101,7 @@
   <h2 style="font-family: Arial, sans-serif;">
    Department of Plant Biology
     </h2>
+    <div class="text-column">
   <p style="font-family: Arial, sans-serif;font-size: 20px">We work on:<ul style="font-family: Arial, sans-serif;font-size: 20px"> </p>
       <li>Regulation of plant specialized metabolism by cell fate</li>
       <li>Reprogramming of plant cell types: biomanufacturing, engineering, and totipotency</li>
@@ -85,14 +116,17 @@
       <li>How can we reprogram plant cell fates for biomanufacturing?</li>
       <li>How can we toggle between differentiated cell states for metabolic engineering and totipotent cell state for genetic engineering?</li>
   </p>
-  
-<img src="https://raw.githubusercontent.com/cxli233/cxLi_lab/refs/heads/main/Pictures/Image1.png" alt="plant pictures" width="720">
-<p style="font-family: Arial, sans-serif;font-size: 16px">
+  </div>
+    
+<div class="image-column">
+  <img src="https://raw.githubusercontent.com/cxli233/cxLi_lab/refs/heads/main/Pictures/Image1.png" alt="plant pictures" width="720">
+  <p style="font-family: Arial, sans-serif;font-size: 16px">
 Left: A <i>Catharanthus roseus</i> (Madagascar Periwinkle) plant - the source of chemotherapeutic medicine <a href="https://en.wikipedia.org/wiki/Vinblastine" target="_blank">vinblastine</a>.<br> 
 Middle: Catharanthus petals on tissue culture, transiently expressing a green fluorescent protein.<br>  
 Right: <i>Kalanchoe daigremontiana</i> (Mother of Thousands) plant - small plantlets (foliar embryos) can be seen on the edges of leaves. 
 </p>
-  
+  </div>
+    
   <p style="font-family: Arial, sans-serif;font-size: 20px">
     Publications: <a href="https://scholar.google.com/citations?user=Hs_XNdUAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a><br>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="30 style= "vertical-align: middle;"> <a href="https://github.com/cxli233" target="_blank">GitHub</a><br>
