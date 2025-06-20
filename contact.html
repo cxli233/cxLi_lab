@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+  <style>
+    .content {     
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;             
+      text-align: left;        
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+    }
+
+    .menu a {
+      font-family: 'Arial', sans-serif;   
+      font-size: 20px;                    
+      color: #e5e5e5;                  
+      text-decoration: none;            
+      padding: 12px 15px;               
+      transition: color 0.3s ease;       
+    }
+
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    @media (min-width: 600px) {
+      .hamburger {
+        display: none;
+      }
+      .menu {
+        display: flex;
+        flex-direction: row;
+      }
+      .menu a {
+        border: none;
+        padding: 10px 20px;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+      <a href="https://cxli233.github.io/cxLi_lab/">Home</a>
+      <a href="#">Research</a>
+      <a href="#">People</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  <h1 style="font-family: Arial, sans-serif;">Contact</h1>
+  <div class="content">
+<p style="font-family: Arial, sans-serif;font-size: 20px">We are at:<br>
+     612 Wilson Road, Room 339<br>
+     East Lansing MI 48824
+  </p>
+   </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
+</body>
+</html>
