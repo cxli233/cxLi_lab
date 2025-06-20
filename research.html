@@ -2,6 +2,13 @@
 <html>
   <head>
       <style>
+  .content {     
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;     
+      text-align: left;        
+    }
+
      nav {
       background-color: #b1f4c8;
       color: white;
@@ -42,13 +49,51 @@
         padding: 10px 20px;
       }
     }
-    
-     .content {     
-      width: 90%;
+
+     .content-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
       max-width: 1000px;
-      margin: 0 auto;     
-      text-align: left;        
+      margin: 0 auto;
+      padding: 20px;
     }
+
+    .image-side {
+      flex: 2;
+      max-width: 400px;
+    }
+
+    .image-side img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .text-side {
+      flex: 3;
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
+
+    @media (max-width: 800px) {
+      .content-section {
+        flex-direction: column;
+      }
+
+      .image-side,
+      .text-side {
+        width: 100%;
+        max-width: none;
+      }
+
+      .image-side img {
+        width: 100%;
+      }
+    }   
+        
   </style>
 </head>
   <body>
@@ -61,6 +106,25 @@
       <a href="https://cxli233.github.io/cxLi_lab/contact">Contact</a>
     </div>
   </nav>
+    
+ <div class="content">
+ <h2>Active projects</h2>
+<hr>
+    <div class="content-section">
+    <div class="image-side">
+      <img src="https://raw.githubusercontent.com/cxli233/cxLi_lab/90eaefd8b00438d99f254f29591fbc71549364c2/Pictures/Fig1.svg" alt="Figure 1 from Li et al., 2025">
+    </div>
+    <div class="text-side">
+       <h3> Regulation of monoterpene indole alkaloid biosynthesis in idioblast.</h3>
+        <p> Monoterpene indole alkaloids (MIA) are a group of specialized metabolites produced by a subset of lineages within the Asterid clade of eudicots, 
+          including <i>Catharanthus roseus</i>, the source of chemotherapeutic agent vinblastine. Vinblastine is only produced and stored in a rare cell type termed "idioblast", which accounts for 2-4% of cells in the leaf. 
+          We are working on identifying regulatory mechanisms (e.g., transcription factors and chromatin) that confer cell type specificity of vinblastine biosynthesis in the idioblast.  
+        Read more about <a href="https://www.nature.com/articles/s41589-023-01327-0">Single cell omics for MIA biosynthesis</a> and <a href="https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.20208">gene regulation in idioblast</a>.
+      </p>
+    </div>
+  </div>
+ </div>
+    
    <script>
     function toggleMenu() {
       var menu = document.getElementById("menu");
