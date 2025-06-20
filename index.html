@@ -8,10 +8,61 @@
       margin: 0 auto;             
       text-align: left;        
     }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-top: 1px solid #444;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    @media (min-width: 600px) {
+      .hamburger {
+        display: none;
+      }
+      .menu {
+        display: flex;
+        flex-direction: row;
+      }
+      .menu a {
+        border: none;
+        padding: 10px 20px;
+      }
+    }
+    
   </style>
 </head>
   
 <body>
+  <nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+      <a href="https://cxli233.github.io/cxLi_lab/">Home</a>
+      <a href="#">Research</a>
+      <a href="#">People</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  
   <div class="content">
   <h1 style="font-family: Arial, sans-serif;">The cxLi Lab at Michigan State University
   <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Michigan_State_Athletics_logo.svg" alt="MSU logo" width="50" style="vertical-align: middle";></h1>
@@ -36,6 +87,17 @@ Right: <i>Kalanchoe daigremontiana</i> (Mother of Thousands) plant - small plant
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/600px-Bluesky_Logo.svg.png" alt="BlueSky" width="30" style="vertical-align: middle";> <a href="https://bsky.app/profile/chenxinli2.bsky.social" target="_blank">BlueSky</a><br>  
   </p>
     </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
 </body>
 
 
